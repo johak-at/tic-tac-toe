@@ -1,7 +1,7 @@
 <script setup>
 import { useStore } from "~/store/store";
 import { storeToRefs } from "pinia";
-
+//Mani
 // useStore() and name handling:
 const store = useStore();
 const name = storeToRefs(store).name;
