@@ -1,5 +1,5 @@
 //Erstelle eine Klasse die das Spiel TicTacToe repräsentiert
-class TicTacToe {
+export class TicTacToe {
   wins = [
     [1, 2, 3],
     [4, 5, 6],
@@ -11,13 +11,15 @@ class TicTacToe {
     [3, 5, 7],
   ];
   players = [[], []];
-  current = 0;
-  checkForWin(player) {
-    //some testet eines der Elemente es zu trifft dass er den Text besteht und gibt true zurück
+
+  winningPlayer(player) {
+    //some testet für jede Sieg-Kombination an Feldern, ob sie in den Feldern des aktuellen Players enthalten ist und gibt true zurück, wenn dies für eine Sieg-Kombination zutrifft
     return wins.some((win) => {
       return win.every((field) => {
-        return player.includes(field);
+        return players[player].includes(field);
       });
     });
   }
+
+
 }

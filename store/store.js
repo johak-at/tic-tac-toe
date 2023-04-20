@@ -1,12 +1,18 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
+import { TicTacToe } from '../game/tictactoe'
 
 export const useStore = defineStore(
     'store',
     () => {
-        const name = ref('')
+        const game = ref({})
+
+        function createGame() {
+            game.value = new TicTacToe()
+        }
+
         const daisyTheme = ref('dark')
-        return { name, daisyTheme }
+        return { game, createGame, daisyTheme }
     },
     {
         persist: true
