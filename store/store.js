@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
-import { TicTacToe } from '../game/tictactoe'
+import { TicTacToe } from '@/game/tictactoe'
 
 export const useStore = defineStore(
     'store',
