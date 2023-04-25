@@ -6,6 +6,7 @@ import { storeToRefs } from "pinia";
 // useStore() and name handling:
 const store = useStore();
 const game = storeToRefs(store).game;
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 onMounted(() => {
   store.createGame();
@@ -13,6 +14,10 @@ onMounted(() => {
 </script>
 <template>
   <v-container>
-    <GameField></GameField>
+    <GameField
+      v-for="number in numbers"
+      :key="number"
+      :number="number"
+    ></GameField>
   </v-container>
 </template>
