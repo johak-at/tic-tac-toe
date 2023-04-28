@@ -10,7 +10,7 @@ export class TicTacToe {
     [1, 5, 9],
     [3, 5, 7],
   ];
-  players = [[], []];
+  players = [[1, 8], []];
 
   winningPlayer(player) {
     //some testet für jede Sieg-Kombination an Feldern, ob sie in den Feldern des aktuellen Players enthalten ist und gibt true zurück, wenn dies für eine Sieg-Kombination zutrifft
@@ -20,6 +20,4 @@ export class TicTacToe {
       });
     });
   }
-
-
 }
