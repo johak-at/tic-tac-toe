@@ -3,5 +3,11 @@ const props = defineProps(["number"]);
 </script>
 
 <template>
-  <div>{{ number }}</div>
+  <div class="field">{{ number }}</div>
 </template>
+
+<style scoped>
+.field {
+  aspect-ratio: 1;
+}
+</style>

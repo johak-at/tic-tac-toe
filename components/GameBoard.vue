@@ -14,10 +14,17 @@ onMounted(() => {
 </script>
 <template>
   <v-container>
-    <GameField
-      v-for="number in numbers"
-      :key="number"
-      :number="number"
-    ></GameField>
+    <div class="board" grid grid-cols-3>
+      <GameField
+        v-for="number in numbers"
+        :key="number"
+        :number="number"
+      ></GameField>
+    </div>
   </v-container>
 </template>
+<style scoped>
+.board {
+  width: 600px;
+}
+</style>
