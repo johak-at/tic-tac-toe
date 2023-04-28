@@ -30,8 +30,13 @@ function makeMove() {
 
 <template>
   <div class="field" v-if="game.players" @click="makeMove">
-    <div v-if="game.players[0].includes(number)">X</div>
-    <div v-if="game.players[1].includes(number)">O</div>
+    <!-- <img src="icon-x.svg" width="100" height="120" v-if="game.players[0].includes(number)"/> -->
+    <div v-if="game.players[0].includes(number)">
+      <img src="/images/SVG/icon-x.svg" width="100" heigth="120" />
+    </div>
+    <div v-if="game.players[1].includes(number)">
+      <img src="/images/SVG/icon-o.svg" width="100" heigth="120" />
+    </div>
   </div>
 </template>
 
