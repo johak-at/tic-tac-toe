@@ -7,11 +7,30 @@ const props = defineProps(["number"]);
 // useStore() and name handling:
 const store = useStore();
 const game = storeToRefs(store).game;
+
+function makeMove() {
+  console.log(game.value.players);
+  //if game.players arrays are of equal length
+  if (game.value.players[0].length === game.value.players[1].length) {
+    //if game.players[0] does not include number
+    if (!game.value.players[0].includes(props.number)) {
+      //push number to game.players[0]
+      game.value.players[0].push(props.number);
+    }
+  } else {
+    //if game.players[1] does not include number
+    if (!game.value.players[1].includes(props.number)) {
+      //push number to game.players[1]
+      game.value.players[1].push(props.number);
+    }
+  }
+}
 </script>
 
 <template>
-  <div class="field" v-if="game.players">
+  <div class="field" v-if="game.players" @click="makeMove">
     <div v-if="game.players[0].includes(number)">X</div>
+    <div v-if="game.players[1].includes(number)">O</div>
   </div>
 </template>
 
