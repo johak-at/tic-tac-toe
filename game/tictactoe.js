@@ -12,11 +12,13 @@ export class TicTacToe {
   ];
   players = [[], []];
 
+  winner = "";
+
   winningPlayer(player) {
     //some testet für jede Sieg-Kombination an Feldern, ob sie in den Feldern des aktuellen Players enthalten ist und gibt true zurück, wenn dies für eine Sieg-Kombination zutrifft
-    return wins.some((win) => {
+    return this.wins.some((win) => {
       return win.every((field) => {
-        return players[player].includes(field);
+        return this.players[player].includes(field);
       });
     });
   }

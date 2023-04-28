@@ -14,13 +14,14 @@ onMounted(() => {
 </script>
 <template>
   <v-container>
-    <div class="board" grid grid-cols-3>
+    <div v-if="!game.winner" class="board" grid grid-cols-3>
       <GameField
         v-for="number in numbers"
         :key="number"
         :number="number"
       ></GameField>
     </div>
+    <div v-else>Game over! {{ game.winner }} wins!</div>
   </v-container>
 </template>
 <style scoped>

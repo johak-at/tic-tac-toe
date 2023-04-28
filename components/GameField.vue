@@ -9,19 +9,20 @@ const store = useStore();
 const game = storeToRefs(store).game;
 
 function makeMove() {
-  console.log(game.value.players);
   //if game.players arrays are of equal length
   if (game.value.players[0].length === game.value.players[1].length) {
     //if game.players[0] does not include number
     if (!game.value.players[0].includes(props.number)) {
       //push number to game.players[0]
       game.value.players[0].push(props.number);
+      if (game.value.winningPlayer(0)) game.value.winner = "Player 1";
     }
   } else {
     //if game.players[1] does not include number
     if (!game.value.players[1].includes(props.number)) {
       //push number to game.players[1]
       game.value.players[1].push(props.number);
+      if (game.value.winningPlayer(1)) game.value.winner = "Player 2";
     }
   }
 }
