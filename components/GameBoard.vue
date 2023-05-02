@@ -22,6 +22,7 @@ onMounted(() => {
       ></GameField>
     </div>
     <div v-else>Game over! {{ game.winner }} wins!</div>
+    <!-- //if there is no winner and all the fields contain a number -->
   </v-container>
 </template>
 <style scoped>

@@ -30,6 +30,10 @@ function makeMove() {
         if (game.value.winningPlayer(1)) game.value.winner = "Player 2";
       }
     }
+    // if the joint player arrays have a length of 9 set winner to "Nobody"
+    if (game.value.players[0].length + game.value.players[1].length === 9) {
+      game.value.winner = "Nobody";
+    }
   }
 }
 </script>
