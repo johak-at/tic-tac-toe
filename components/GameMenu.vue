@@ -9,4 +9,6 @@ const game = storeToRefs(store).game;
 <template>
   <h1>Menu</h1>
   <button @click="store.createGame()">Start Game!</button>
+  //erstelle ein Eingabefeld für einen Namen und einen Button, der den Namen an
+  die Funktion store.createGame() übergibt
 </template>
