@@ -40,10 +40,11 @@ function makeMove() {
 
 <template>
   <div class="field" v-if="game.players" @click="makeMove">
-    <img
+    <!-- <img
       src="/images/SVG/icon-x.svg"
       width="100"
       height="120"
+      
       v-if="game.players[0].includes(number)"
     />
     <img
@@ -51,19 +52,22 @@ function makeMove() {
       width="100"
       height="120"
       v-if="game.players[1].includes(number)"
-    />
-    <!-- <div v-if="game.players[0].includes(number)">
-      <img src="/images/SVG/icon-x.svg" width="100" heigth="120" />
+    /> -->
+    <div v-if="game.players[0].includes(number)">
+      <img src="/images/SVG/icon-x.svg" width="145" heigth="145" />
     </div>
     <div v-if="game.players[1].includes(number)">
-      <img src="/images/SVG/icon-o.svg" width="100" heigth="120" />
-    </div> -->
+      <img src="/images/SVG/icon-o.svg" width="145" heigth="145" />
+    </div>
   </div>
 </template>
 
 <style scoped>
 .field {
   aspect-ratio: 1;
-  border: 1px solid red;
+  border: 2px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
