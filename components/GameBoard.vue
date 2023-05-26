@@ -19,6 +19,14 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     </div>
     <div v-else>Game over! {{ game.winner }} wins!</div>
     <!-- //if there is no winner and all the fields contain a number -->
+    <!-- <div
+      v-if="
+        !game.winner && game.players[0].length + game.players[1].length === 9
+      "
+    >
+      Game over! Nobody wins!
+    </div> -->
+    <v-button @click="game = {}">Back to Menu!</v-button>
   </v-container>
 </template>
 <style scoped>
