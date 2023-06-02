@@ -1,5 +1,10 @@
 //Erstelle eine Klasse die das Spiel TicTacToe repräsentiert
 export class TicTacToe {
+  constructor(player1, player2) {
+    this.playerNames[0] = player1;
+    this.playerNames[1] = player2;
+  }
+
   wins = [
     [1, 2, 3],
     [4, 5, 6],
@@ -11,7 +16,7 @@ export class TicTacToe {
     [3, 5, 7],
   ];
   players = [[], []];
-
+  playerNames = ["Player 1", "Player 2"];
   winner = "";
 
   winningPlayer(player) {

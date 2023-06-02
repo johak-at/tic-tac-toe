@@ -33,4 +33,17 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 .board {
   width: 600px;
 }
+v-button {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  background-color: rgba(28, 123, 164, 155);
+  border-radius: 10px;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
 </style>

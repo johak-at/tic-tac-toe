@@ -20,18 +20,27 @@ function makeMove() {
       if (!game.value.players[0].includes(props.number)) {
         //push number to game.players[0]
         game.value.players[0].push(props.number);
-        if (game.value.winningPlayer(0)) game.value.winner = "Player 1";
+        if (game.value.winningPlayer(0))
+          game.value.winner = game.value.playerNames[0];
       }
     } else {
       //if game.players[1] does not include number
       if (!game.value.players[1].includes(props.number)) {
         //push number to game.players[1]
         game.value.players[1].push(props.number);
-        if (game.value.winningPlayer(1)) game.value.winner = "Player 2";
+        if (game.value.winningPlayer(1))
+          game.value.winner = game.value.playerNames[1];
       }
     }
     // if the joint player arrays have a length of 9 set winner to "Nobody"
-    if (game.value.players[0].length + game.value.players[1].length === 9) {
+    // if (game.value.players[0].length + game.value.players[1].length === 9) {
+    // game.value.winner = "Nobody";
+    //if the joint player arrays have a length of 9 and none of the wins are true set winner to "Nobody"
+    if (
+      game.value.players[0].length + game.value.players[1].length === 9 &&
+      !game.value.winningPlayer(0) &&
+      !game.value.winningPlayer(1)
+    ) {
       game.value.winner = "Nobody";
     }
   }
