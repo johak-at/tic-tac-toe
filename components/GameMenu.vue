@@ -14,11 +14,11 @@ const player2 = ref("Player 2");
   <button @click="store.createGame(player1, player2)">Start Game!</button>
   <div>
     <p>Player 1 is:</p>
-    <input v-model="player1" />
+    <input v-model="player1" placeholder="enter name" />
   </div>
   <div>
     <p>Player 2 is:</p>
-    <input v-model="player2" />
+    <input v-model="player2" placeholder="enter name" />
   </div>
 </template>
 <style scoped>
@@ -28,14 +28,14 @@ h1 {
   font-weight: bold;
   text-align: center;
   /* color: rgba(28, 123, 164, 155); */
-  color: rgb(32, 135, 179);
+  color: #31c3bd;
 }
 h2 {
   font-size: 2rem;
   font-style: italic;
   font-weight: bold;
   text-align: center;
-  color: rgb(32, 135, 179);
+  color: #31c3bd;
 }
 button {
   font-size: 1.5rem;
@@ -43,7 +43,7 @@ button {
   font-weight: bold;
   text-align: center;
   color: black;
-  background-color: rgba(28, 123, 164, 155);
+  background-color: #31c3bd;
   border-radius: 10px;
   padding: 10px;
 }
@@ -59,6 +59,6 @@ p {
   font-size: 1.2rem;
   font-style: italic;
   text-align: left;
-  color: rgb(32, 135, 179);
+  color: #31c3bd;
 }
 </style>
